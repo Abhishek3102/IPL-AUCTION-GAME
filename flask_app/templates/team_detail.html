@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Details</title>
+</head>
+<body>
+    <h1>{{ team.name }}</h1>
+    <p>Budget: {{ team.budget }}</p>
+    <h2>Players</h2>
+    <ul>
+        {% for player in team.players %}
+            <li>{{ player.name }} - Skills: {{ player.skills }} - Expertise: {{ player.expertise_level }} - Price: {{ player.price }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Bid for Player</h2>
+    <form action="{{ url_for('bid') }}" method="post">
+        <input type="hidden" name="team_id" value="{{ team.id }}">
+        <label for="player_id">Player ID:</label>
+        <input type="text" id="player_id" name="player_id">
+        <label for="amount">Bid Amount:</label>
+        <input type="text" id="amount" name="amount">
+        <button type="submit">Bid</button>
+    </form>
+</body>
+</html>
