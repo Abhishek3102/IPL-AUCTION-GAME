@@ -12,7 +12,7 @@ class Player(models.Model):
     skills = models.CharField(max_length=100)
     expertise_level = models.IntegerField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    team = models.ForeignKey(Team, on_delete=models.SET_NULL, null=True, blank=True)
+    team = models.ForeignKey(Team, on_delete=models.SET_NULL, null=True, blank=True,related_name='players')
 
     def __str__(self):
         return self.name
