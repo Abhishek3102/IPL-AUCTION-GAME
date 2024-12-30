@@ -51,5 +51,13 @@ templates/team_detail.html: Template for displaying team and player details.
 Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
+Some Snaps of the app : 
+
+![image](https://github.com/user-attachments/assets/6088f58e-d0d5-4e4e-875f-f2f70d574915)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 License
 This project is licensed under the MIT License.
